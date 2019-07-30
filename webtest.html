@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Whiskey Drop | Taste a new whiskey every month</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <!-- the fixed-top will keep the navbar on its position while scrolling -->
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
+        <!-- The <a> which we will give a class of navbar-brand. We are then going 
+        to have a menu with two navigation links,one to our homepage and another to an imaginary about page-->
+        <a href="/" class="navbar-brand">Whiskey Drop</a>
+        <!-- The data-toggle is telling Bootstrap tha this button will be used as atrigger for a collapsible element somewhere on the page-->
+        <!-- The data target give the ID of the collapsible element-->
+        <!-- Aria stands for accessible rich internet applications, and these attributes are used to provide accessibility to screen readers-->
+        <!-- We didi the button class and the div class="collapse navabar-collapse" id=.. because we wanted to create the menu bellow that will be dropeddown on mobile screens-->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle naviagtion">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+        <!-- The id=navbarNavDropdown matches the data-target="#navbarNavDropdown"-->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <!-- To create the menu we create an unordered list and gibe it the class of nav-bar
+        and mr-auto, which will push teh content over to the left. 
+        Inside our list we will provide list items. -->
+            <ul class="navbar-nav mr-auto">
+                <!-- The first oen will have the class of active so that it will be highlighted.
+            And it will have nav-item and mr-2, just to give a little bit of right-band spacing on our links -->
+                <!-- Inside that, we'll create an <a> tag, which will have the class of nav-link and an href,which 
+            just points towards the home -->
+                <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                <!-- On the second link, we will just remove the active class,change the href and change the text -->
+                <li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenulink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Whiskeys
+                        </a>
+                    <div class="dropdown-menu" arial-labelledby="navbarDropdownMenulink">
+                        <a class="dropdown-item" href="#">Irish</a>
+                        <a class="dropdown-item" href="#">Scotch</a>
+                        <a class="dropdown-item" href="#">Japanese</a>
+                        <a class="dropdown-item" href="#">American</a>
+                    </div>
+                </li>
+                <!-- this only be displayed on mobile device -->
+                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <!-- If we wanna hide the marketing text and signin/signup on a mobile screen,
+        we will add it as a menu option while we are on mobile. So this will be displayed
+        on medium sized se=creen resolutions and above -->
+        <div class="d-none d-md-block">
+            <!-- Here we create our marketing text, the third element of our navbar. So we create
+        an paragraph,give it a class of navbar-text, my-auto so that we have an automatic top and 
+        bottom margin, and mr-2 to give a little bit of spacing on the right -->
+            <p class="navbar-text my-auto mr-2"><i>Great Whiskey delivered to your door</i></p>
+            <a href="/login">Sign In / Sign Up</a>
+        </div>
+    </nav>
+    <!-- the mt-3 will give a margin to our container and just push the content down a bit -->
+    <article class="container mt-3">
+        <div class="row d-none d-sm-block">
+            <div class="col-12">
+                <div class="alert alert-warning">
+                    <strong>Sale Now On!</strong>We've got a sale on. Get a 12-month subscription for the price of 6! <a href="">See here for details!</a>
+                </div>
+            </div>
+        </div>
+        <!-- Callout -->
+        <div class="row">
+            <!-- to make the callout section stand out-->
+            <section class="callout jumbotron">
+                <h1>The finest whiskeys delivered to your doorstep.</h1>
+                <p class="lead">Sign up today to start receiving the world's best whiskeys every month.
+                    <s class="d-none d-sm-inline">€19.99</s>
+                    <span class="d-inline d-sm-none"><br></span>
+                    <strong><mark>First one is free!</mark></strong></p>
+                <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up!</button>
+                <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
+        </div>
+        </section>
+        <!-- /.callout -->
+        <hr>
+
+        <!-- Quotes -->
+        <section class="quotes">
+            <div class="row">
+                <div class="col-12 md-6">
+                    <h2 class="text-uppercase">Quotes:</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="media">
+                        <div class="d-none d-sm-block">
+                            <!-- The rounded-circle class will give the shape of teh image as a circle -->
+                            <img src="images/girl-image.jpg" class="rounded-circle mr-3" height=100 width=100></img>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="blockquote">
+                                <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
+                                <p>- Jane Doe</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="media">
+                        <div class="d-none d-sm-block">
+                            <!-- The rounded-circle class will give the shape of teh image as a circle -->
+                            <img src="images/guy-image.jpg" class="rounded-circle mr-3" height=100 width=100></img>
+                        </div>
+                        <div class="media-body">
+                            <blockquote class="blockquote">
+                                <p>I haven't been sober for months!</p>
+                                <p>- Jane Doe</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.quotes -->
+        <hr>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="row">
+                <!-- my-5 gives a bit of a vertical space on the heading -->
+                <div class="col-12 my-5"></div>
+                <h2 class="text-uppercase">Features:</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <!-- We add the badge badge-success, because we wanted to point that this feature is the NEW one-->
+                        <h3> <i class="fas fa-gift d-none d-sm-inline"></i> Feature 1<span class="badge badge-success">NEW!</span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="btn btn-sm btn-light" href="">Read More</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3><i class="fas fa-credit-card d-none d-sm-inline"></i> Feature 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="btn btn-sm btn-light" href="">Read More</p>
+                    </div>
+                </div>
+                <div class="col-12 d-md-none d-lg-block col-lg-4">
+                    <div class="feature">
+                        <h3><i class="fas fa-times-circle d-none d-sm-inline"></i> Feature 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="btn btn-sm btn-light" href="">Read More</p>
+                    </div>
+                </div>
+            </div>
+            <table class="table">
+                <h2 class="text-uppercase">Monthly Favorites</h2>
+                <thead class="thead-dark"></thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Origin</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Dalmore</td>
+                        <td>Scotland</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Diamond Jubileey</td>
+                        <td>Scotland</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Midleton</td>
+                        <td>Ireland</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Longbranch</td>
+                        <td>Kentucy,US</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>The Macallan</td>
+                        <td>Scotland</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- /.features -->
+    </article>
+    <!-- Because our modal was hidden by default we add the id="singUpModal" which will be the connection,so that Bootstrap knows which modal to open when we hit the button-->
+    <div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up To Whiskey Drop!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="repeatPassword">Password</label>
+                            <input type="password" class="form-control" id="repeatPassword" placeholder="Password">
+                        </div>
+                         <div class="form-group">
+                            <label for="password">Repeat Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Repeat Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
